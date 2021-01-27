@@ -1,0 +1,9 @@
+import torch
+
+from densenet import DenseNet
+use_cuda = 6
+num_classes = 6
+model = DenseNet(num_classes)
+if use_cuda:
+    model = torch.nn.DataParallel(model).cuda()
+checkpoint = torch.load('checkpoint-epoch60.pt')
