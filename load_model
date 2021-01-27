@@ -1,7 +1,7 @@
 import torch
 
 from densenet import DenseNet
-use_cuda = 6
+use_cuda = False
 num_classes = 6
 model = DenseNet(num_classes)
 if use_cuda:
